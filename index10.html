@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavini Foundation | Mental Health Advocacy & Social Justice</title>
+    
+    <meta name="description" content="Bhavini Foundation is a registered NGO dedicated to mental health support, domestic violence advocacy, and combating human trafficking in Uttar Pradesh.">
+    <meta name="keywords" content="Mental Health NGO, Domestic Violence Help, Human Trafficking Prevention India, Bhavini Foundation, Social Advocacy Faizabad">
+    <meta name="author" content="Bhavini Foundation">
+
+    <meta property="og:title" content="Bhavini Foundation | Healing Minds, Protecting Lives">
+    <meta property="og:description" content="Join our mission to empower survivors and provide professional mental health accessibility.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1482848961846-c15622fd5db2?q=80&w=600">
+    <meta property="og:url" content="https://bhavinifoundation.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                        url('https://images.unsplash.com/photo-1482848961846-c15622fd5db2?auto=format&fit=crop&w=1200'); 
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .impact-card:hover { transform: translateY(-8px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+		.modal { transition: opacity 0.25s ease; visibility: hidden; opacity: 0; }
+		.modal.show { visibility: visible; opacity: 1; }
+		.modal-active { overflow: hidden; }
+		
+		<link rel="icon" type="image/png" href="https://drive.google.com/file/d/1LNe3w6z0V01w75FKMCs--sm7hLfakuTL">
+		<link rel="apple-touch-icon" href="https://drive.google.com/file/d/1LNe3w6z0V01w75FKMCs--sm7hLfakuTL">
+		
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 py-3 px-6 flex justify-between items-center">
+        <div class="text-xl font-bold text-orange-600 tracking-tighter leading-none uppercase">BHAVINI<br><span class="text-[10px] text-gray-400 font-normal tracking-[0.2em]">Foundation</span></div>
+        <div class="hidden md:flex space-x-6 text-[11px] font-bold uppercase tracking-widest text-gray-600">
+            <a href="#vision" class="hover:text-orange-600 transition">Vision</a>
+            <a href="#causes" class="hover:text-orange-600 transition">Causes</a>
+            <a href="#work" class="hover:text-orange-600 transition">Our Work</a>
+            <a href="#team" class="hover:text-orange-600 transition">Leadership</a>
+            <a href="#volunteer" class="hover:text-orange-600 transition">Join Us</a>
+            <a href="#contact" class="hover:text-orange-600 transition">Contact</a>
+        </div>
+        <button onclick="toggleModal()" class="bg-orange-600 text-white px-5 py-2 rounded text-xs font-bold hover:bg-orange-700 transition uppercase tracking-widest">Donate</button>
+    </nav>
+
+    <header class="hero-bg h-[85vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <span class="bg-orange-600/20 text-orange-400 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-4 inline-block border border-orange-600/30">Empowering Lives Since 2024</span>
+            <h1 class="text-4xl md:text-7xl font-bold mb-4 uppercase tracking-tighter leading-tight">Healing Minds,<br>Protecting Lives</h1>
+            <p class="text-lg md:text-xl opacity-90 mb-8 font-light italic max-w-2xl mx-auto">"A dedicated NGO combating domestic violence, mental abuse, and human trafficking through clinical excellence and social advocacy."</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#volunteer" class="bg-orange-600 px-8 py-4 rounded font-bold hover:bg-orange-700 uppercase text-xs tracking-widest transition shadow-2xl">Volunteer Registration</a>
+                <a href="tel:+918448928049" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded font-bold hover:bg-white hover:text-gray-900 uppercase text-xs tracking-widest transition">
+                    <i class="fas fa-phone-alt mr-2 text-orange-500"></i>Emergency Helpline
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-orange-600 uppercase tracking-widest">Our Vision & Approach</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        At Bhavini Foundation, our vision is to create a community where mental health is a top priority. We take a **holistic approach**, addressing not only the symptoms of mental illness but also the underlying causes like domestic violence, dowry issues, and sexual abuse.
+                    </p>
+                    <p class="text-gray-500 text-sm italic border-l-4 border-orange-500 pl-4 py-2 mt-4">
+                        "We believe in treating the person, not just the problem, by looking at biological, psychological, and social factors."
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-orange-50 p-6 rounded-xl border border-orange-100">
+                        <h4 class="font-bold text-orange-700 mb-2 uppercase text-xs">Advocacy</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Standing as a beacon of support for victims of human trafficking and dowry-related concerns.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                        <h4 class="font-bold text-gray-700 mb-2 uppercase text-xs">Accessibility</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Expanding services and increasing accessibility to mental health resources across rural and urban communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="causes" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center uppercase tracking-widest text-gray-900">Our Core Causes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-2xl shadow-sm border-b-4 border-orange-600 hover-lift">
+                    <div class="text-orange-600 text-4xl mb-6"><i class="fas fa-brain"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Mental Health</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Providing professional counseling and psychological support for victims of trauma, anxiety, and depression caused by social abuse.</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border-b-4 border-orange-600 hover-lift">
+                    <div class="text-orange-600 text-4xl mb-6"><i class="fas fa-gavel"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Social Justice</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Fighting against domestic violence, dowry demands, and sexual harassment through legal aid and awareness workshops.</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border-b-4 border-orange-600 hover-lift">
+                    <div class="text-orange-600 text-4xl mb-6"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Life Protection</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Active intervention and rehabilitation programs for survivors of human trafficking and child exploitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section id="framework" class="py-20 bg-white">
+		<div class="container mx-auto px-6">
+			<h2 class="text-3xl font-bold mb-12 text-center uppercase tracking-[0.2em] text-gray-900">Operational Excellence</h2>
+			<div class="grid md:grid-cols-4 gap-4">
+				<div class="p-8 bg-gray-50 rounded-2xl border-t-4 border-orange-500">
+					<span class="text-orange-500 font-black text-4xl opacity-20">01</span>
+					<h4 class="font-bold text-lg mb-2">IDENTIFY</h4>
+					<p class="text-xs text-gray-500 leading-relaxed">Systematic outreach in rural districts to identify survivors of domestic abuse and trafficking.</p>
+				</div>
+				<div class="p-8 bg-gray-50 rounded-2xl border-t-4 border-orange-500">
+					<span class="text-orange-500 font-black text-4xl opacity-20">02</span>
+					<h4 class="font-bold text-lg mb-2">INTERVENE</h4>
+					<p class="text-xs text-gray-500 leading-relaxed">Providing immediate clinical excellence through professional counseling and legal advocacy.</p>
+				</div>
+				<div class="p-8 bg-gray-50 rounded-2xl border-t-4 border-orange-500">
+					<span class="text-orange-500 font-black text-4xl opacity-20">03</span>
+					<h4 class="font-bold text-lg mb-2">REHABILITATE</h4>
+					<p class="text-xs text-gray-500 leading-relaxed">Long-term mental health support and skill-building for total social reintegration.</p>
+				</div>
+				<div class="p-8 bg-gray-50 rounded-2xl border-t-4 border-orange-500">
+					<span class="text-orange-500 font-black text-4xl opacity-20">04</span>
+					<h4 class="font-bold text-lg mb-2">ADVOCATE</h4>
+					<p class="text-xs text-gray-500 leading-relaxed">Working with government bodies to influence policy and prevent future exploitation.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	    <section id="work" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4 uppercase tracking-widest text-orange-600">Our Work in Action</h2>
+            <p class="text-gray-500 mb-12 text-sm italic">"Real change happens through consistent community engagement."</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=400&h=400" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-orange-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-xs uppercase tracking-widest">Education Drive</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=400&h=400" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-orange-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-xs uppercase tracking-widest">Medical Camps</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=400&h=400" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-orange-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-xs uppercase tracking-widest">Awareness</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1687341767060-a503382523e4?auto=format&fit=crop&w=400&h=400" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-orange-600/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold text-xs uppercase tracking-widest">Resilience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-3xl p-10 text-white grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-3xl font-bold text-orange-500">500+</h4>
+                    <p class="text-[10px] uppercase tracking-widest mt-2">Counseling Sessions</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl font-bold text-orange-500">120+</h4>
+                    <p class="text-[10px] uppercase tracking-widest mt-2">Legal Cases Aided</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl font-bold text-orange-500">15+</h4>
+                    <p class="text-[10px] uppercase tracking-widest mt-2">Active Districts</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl font-bold text-orange-500">1000+</h4>
+                    <p class="text-[10px] uppercase tracking-widest mt-2">Lives Impacted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                
+                <div class="lg:w-1/2 bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-10 uppercase tracking-widest text-orange-600 border-l-4 border-orange-600 pl-4">Our Leadership</h2>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-md flex-shrink-0 grayscale group-hover:grayscale-0 transition duration-500">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 leading-tight">Mithila Malhotra</h3>
+                                <p class="text-orange-600 font-bold text-[10px] uppercase tracking-widest mb-2">Founder & Director</p>
+                                <p class="text-xs text-gray-500 leading-relaxed">Advocating for gender equality and protection against domestic abuse.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-md flex-shrink-0 grayscale group-hover:grayscale-0 transition duration-500">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 leading-tight">Akhil Mahajan</h3>
+                                <p class="text-orange-600 font-bold text-[10px] uppercase tracking-widest mb-2">Founder & Director</p>
+                                <p class="text-xs text-gray-500 leading-relaxed">Strategizing mental health resource accessibility and rural outreach.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="volunteer" class="lg:w-1/2 bg-gray-900 rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+                    <div class="p-10 flex-grow">
+                        <h2 class="text-2xl font-bold mb-2 uppercase tracking-widest text-white">Join Our Mission</h2>
+                        <p class="text-xs text-gray-400 mb-8 font-light italic">"Help us reach survivors in remote areas."</p>
+                        
+                        <form id="vForm" action="https://script.google.com/macros/s/AKfycbwEXOyNer51OcZFT8q5QzuZsb054kCmFIXzPsjujWpKwisuLxq08l4dLIqIwf_gQll19Q/exec" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="Full Name" required class="bg-gray-800 border-none p-4 rounded-xl text-xs text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-600 outline-none">
+                            
+                            <input type="email" name="email" placeholder="Email Address" required class="bg-gray-800 border-none p-4 rounded-xl text-xs text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-600 outline-none">
+                            
+                            <input type="tel" name="phone" placeholder="Phone Number" class="bg-gray-800 border-none p-4 rounded-xl text-xs text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-600 outline-none">
+                            
+                            <select name="role" class="bg-gray-800 border-none p-4 rounded-xl text-xs text-gray-500 focus:ring-2 focus:ring-orange-600 outline-none appearance-none">
+                                <option value="Mentorship">Mentorship</option>
+                                <option value="Legal Advocacy">Legal Advocacy</option>
+                                <option value="Health Support">Health Support</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            
+                            <textarea name="message" placeholder="Tell us why you want to join..." class="md:col-span-2 bg-gray-800 border-none p-4 rounded-xl text-xs text-white placeholder-gray-500 focus:ring-2 focus:ring-orange-600 outline-none h-24 resize-none"></textarea>
+                            
+                            <button type="submit" id="submitBtn" class="md:col-span-2 bg-orange-600 text-white font-bold py-4 rounded-xl uppercase text-xs tracking-[0.2em] hover:bg-orange-700 transition shadow-lg">Submit Registration</button>
+                        </form>
+
+                        <div id="success" class="hidden text-green-400 font-bold text-center mt-6 animate-pulse">
+                            <i class="fas fa-check-circle mr-2"></i>Application Sent Successfully!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-gray-400 py-16 px-6">
+        <div class="container mx-auto grid md:grid-cols-3 gap-12 text-sm">
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest">Official Contact</h4>
+                <p class="mb-3"><i class="fas fa-phone-alt text-orange-500 mr-3"></i>+91 8448928049 / 8448928452</p>
+                <p class="mb-3"><i class="fas fa-envelope text-orange-500 mr-3"></i>info@bhavinifoundation.com</p>
+                <p><i class="fas fa-map-marker-alt text-orange-500 mr-3"></i>124, Modha South, Faizabad, UP - 224001</p>
+                <div class="flex space-x-6 text-xl mt-8">
+                    <a href="https://www.linkedin.com/company/bhavini-foundation" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/bhavinifoundation/" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918448928049" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest">Legal Identity</h4>
+                <p class="mb-2"><strong>CIN:</strong> U88900UP2024NPL204877</p>
+                <p class="mb-2"><strong>Status:</strong> Active (Private Limited NGO)</p>
+                <p class="text-xs italic text-gray-500">Registered on June 20, 2024, at ROC Kanpur. Categorized as a non-profit advocate for mental health and social protection.</p>
+            </div>
+            <div class="bg-gray-800 p-8 rounded-xl text-center">
+                <h4 class="text-white font-bold mb-4 uppercase tracking-widest">Make an Impact</h4>
+                <p class="text-xs mb-6 opacity-60">Your donations help us fight human trafficking and provide mental health accessibility.</p>
+                <button onclick="toggleModal()" class="w-full bg-orange-600 text-white font-bold py-3 rounded uppercase tracking-[0.2em] hover:bg-orange-700 transition">Donate Now</button>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-[9px] uppercase tracking-[0.5em] opacity-40">
+            &copy; 2026 BHAVINI FOUNDATION | ALL RIGHTS RESERVED
+        </div>
+    </footer>
+
+<div id="donateModal" class="modal fixed inset-0 flex items-center justify-center z-[100] p-4">
+    <div class="absolute inset-0 bg-gray-900 opacity-95" onclick="toggleModal()"></div>
+    <div class="bg-white w-full max-w-md mx-auto rounded-3xl shadow-2xl z-50 overflow-hidden text-center p-8">
+        <div class="flex justify-between items-start mb-4">
+            <div class="text-left">
+                <h3 class="text-xl font-bold uppercase tracking-tight text-gray-900">Support Our Vision</h3>
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest">Mental Health & Social Advocacy</p>
+            </div>
+            <button onclick="toggleModal()" class="text-gray-400 hover:text-orange-600 transition">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=bhavini@okaxis" alt="Donation QR Code" class="mx-auto mb-3 rounded-lg shadow-sm">
+                <p class="text-orange-600 font-bold text-sm mb-1">bhavini@okaxis</p>
+                <p class="text-[9px] text-gray-400 uppercase font-bold tracking-[0.2em]">Scan to Pay via UPI</p>
+            </div>
+
+            <div class="text-left space-y-3">
+                <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] border-b pb-1">Bank Transfer Details</h4>
+                <div>
+                    <p class="text-[9px] uppercase text-gray-400">Bank Name</p>
+                    <p class="text-xs font-bold text-gray-800">AXIS BANK</p>
+                </div>
+                <div>
+                    <p class="text-[9px] uppercase text-gray-400">Account Number</p>
+                    <p class="text-xs font-bold text-gray-800 tracking-wider">924020037380123</p> 
+                </div>
+                <div>
+                    <p class="text-[9px] uppercase text-gray-400">IFSC Code</p>
+                    <p class="text-xs font-bold text-orange-600 uppercase">UTIB0000000</p>
+                </div>
+                <div>
+                    <p class="text-[9px] uppercase text-gray-400">Account Name</p>
+                    <p class="text-xs font-bold text-gray-800">BHAVINI FOUNDATION</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-[10px] text-gray-400 leading-relaxed italic uppercase mt-8 border-t pt-4">
+            "Your support helps us fight human trafficking and provide mental health accessibility."
+        </p>
+    </div>
+</div>
+
+    <a href="https://wa.me/918448928049" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('donateModal');
+            modal.classList.toggle('show');
+            document.body.classList.toggle('modal-active');
+        }
+
+        const form = document.getElementById('vForm');
+        const successMsg = document.getElementById('success');
+        const btn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            btn.innerText = "SENDING...";
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            })
+            .catch(error => {
+                alert('Something went wrong. Please try again.');
+                btn.innerText = "SUBMIT REGISTRATION";
+                btn.disabled = false;
+            });
+        });
+    
+	// Scroll Reveal Logic
+window.addEventListener('scroll', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) { el.classList.add('active'); }
+    });
+});
+
+// Simple Counter Animation
+const counters = document.querySelectorAll('.text-3xl.font-bold.text-orange-500');
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.innerText.replace('+', '');
+        const count = +counter.getAttribute('data-current') || 0;
+        const speed = 200;
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.setAttribute('data-current', count + inc);
+            counter.innerText = Math.ceil(count + inc) + "+";
+            setTimeout(updateCount, 10);
+        } else {
+            counter.innerText = target + "+";
+        }
+    };
+    // Trigger this when section is visible
+    updateCount();
+});
+</script>
+</body>
+</html>
