@@ -13,6 +13,11 @@
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/abhishekism/Bhavinifoundation/74fa113e766bc90a5156094f5c4ce8560402632d/dca9536e-bd4d-4399-8d4f-3b2f15fcf831.png" />
 
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' https: data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https:; frame-ancestors 'none';">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -183,6 +188,9 @@
     .media-strip { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:32px; }
     .media-logo { height:28px; opacity:.35; filter:grayscale(1) brightness(0); transition:opacity .3s, filter .3s; }
     .media-logo:hover { opacity:.7; }
+
+    /* Honeypot — completely invisible, zero size */
+    .hp-field { opacity:0 !important; position:absolute !important; top:0 !important; left:0 !important; height:0 !important; width:0 !important; overflow:hidden !important; z-index:-9999 !important; pointer-events:none !important; }
   </style>
   <script type="application/ld+json">
   {
@@ -703,7 +711,7 @@
             <button class="amt-btn" onclick="selectAmt(this,'custom')">Custom</button>
           </div>
           <div id="customAmtWrap" class="hidden">
-            <input type="number" placeholder="Enter amount (₹)" class="finput text-sage-900" id="customAmt" />
+            <input type="number" placeholder="Enter amount (₹)" class="finput text-sage-900" id="customAmt" autocomplete="off" min="1" max="10000000" />
           </div>
         </div>
         <div class="flex items-center gap-2 rounded-xl p-3" style="background:rgba(240,164,114,.12);border:1px solid rgba(240,164,114,.2)">
@@ -725,7 +733,7 @@
         <div class="rounded-2xl p-5" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
           <p class="text-xs font-black uppercase tracking-widest mb-2" style="color:#9db890">Corporate or Large Donations</p>
           <p class="text-xs leading-relaxed mb-4" style="color:rgba(255,255,255,.5)">For NEFT / RTGS / cheque donations or CSR partnerships, reach out to us privately and we'll share verified bank details securely.</p>
-          <a href="mailto:info@bhavinifoundation.com?subject=Donation%20Enquiry" class="flex items-center gap-2 text-xs font-black tracking-widest uppercase py-3 px-4 rounded-xl transition-all" style="background:rgba(255,255,255,.08);color:#f0a472;border:1px solid rgba(240,164,114,.2)">
+          <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#104;&#97;&#118;&#105;&#110;&#105;&#102;&#111;&#117;&#110;&#100;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;?subject=Donation%20Enquiry" class="flex items-center gap-2 text-xs font-black tracking-widest uppercase py-3 px-4 rounded-xl transition-all" style="background:rgba(255,255,255,.08);color:#f0a472;border:1px solid rgba(240,164,114,.2)">
             <i class="fas fa-envelope"></i> info@bhavinifoundation.com
           </a>
         </div>
@@ -762,13 +770,13 @@
         <div class="w-16 h-16 rounded-2xl bg-terra-50 text-terra-500 flex items-center justify-center text-2xl mx-auto mb-5"><i class="fas fa-handshake"></i></div>
         <h3 class="font-serif text-xl text-sage-900 mb-3">Partner</h3>
         <p class="text-sage-600 text-sm leading-relaxed mb-5">Is your school, hospital, or company looking to make a real social impact? Partner with us for workshops, CSR initiatives, or joint programmes.</p>
-        <a href="mailto:info@bhavinifoundation.com" class="inline-flex items-center gap-2 bg-terra-500 hover:bg-terra-600 text-white text-xs font-bold tracking-widest uppercase px-5 py-3 rounded-full transition-all">Get in Touch</a>
+        <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#104;&#97;&#118;&#105;&#110;&#105;&#102;&#111;&#117;&#110;&#100;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;" class="inline-flex items-center gap-2 bg-terra-500 hover:bg-terra-600 text-white text-xs font-bold tracking-widest uppercase px-5 py-3 rounded-full transition-all">Get in Touch</a>
       </div>
       <div class="card reveal d2 p-8 text-center">
         <div class="w-16 h-16 rounded-2xl bg-sage-50 text-sage-500 flex items-center justify-center text-2xl mx-auto mb-5"><i class="fas fa-bullhorn"></i></div>
         <h3 class="font-serif text-xl text-sage-900 mb-3">Spread the Word</h3>
         <p class="text-sage-600 text-sm leading-relaxed mb-5">Share our mission on social media, organise a fundraiser in your community, or simply tell one person about Bhavini Foundation today.</p>
-        <a href="https://www.instagram.com/bhavinifoundation/" target="_blank" class="inline-flex items-center gap-2 border-2 border-sage-300 text-sage-600 hover:bg-sage-700 hover:text-white hover:border-sage-700 text-xs font-bold tracking-widest uppercase px-5 py-3 rounded-full transition-all">Follow &amp; Share</a>
+        <a href="https://www.instagram.com/bhavinifoundation/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-2 border-sage-300 text-sage-600 hover:bg-sage-700 hover:text-white hover:border-sage-700 text-xs font-bold tracking-widest uppercase px-5 py-3 rounded-full transition-all">Follow &amp; Share</a>
       </div>
     </div>
 
@@ -779,9 +787,9 @@
           <h2 class="font-serif text-3xl mb-2" style="color:#faf6f0">Volunteer Registration</h2>
           <p class="text-sm italic mb-8" style="color:rgba(255,255,255,.45)">"Every hand we gain reaches ten more lives."</p>
           <form id="vForm" action="https://script.google.com/macros/s/AKfycbwEXOyNer51OcZFT8q5QzuZsb054kCmFIXzPsjujWpKwisuLxq08l4dLIqIwf_gQll19Q/exec" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <input type="text"  name="name"  placeholder="Full Name" required class="dinput" />
-            <input type="email" name="email" placeholder="Email Address" required class="dinput" />
-            <input type="tel"   name="phone" placeholder="Phone Number" class="dinput" />
+            <input type="text" name="name" maxlength="100" autocomplete="name"  placeholder="Full Name" required class="dinput" />
+            <input type="email" name="email" maxlength="150" autocomplete="email" placeholder="Email Address" required class="dinput" />
+            <input type="tel" name="phone" maxlength="15" autocomplete="tel" pattern="[0-9+\-\s]{7,15}" placeholder="Phone Number" class="dinput" />
             <select name="role" required class="dinput appearance-none cursor-pointer">
               <option value="" disabled selected>Select Your Role</option>
               <option value="Mentorship">Mentorship</option>
@@ -793,22 +801,24 @@
               <option value="Other">Other</option>
             </select>
             <textarea name="message" placeholder="Tell us why you want to join..." class="dinput md:col-span-2 h-24 resize-none"></textarea>
+            <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button type="submit" id="submitBtn" class="md:col-span-2 bg-terra-500 hover:bg-terra-400 text-white font-black text-xs tracking-widest uppercase py-4 rounded-xl transition-all shadow-md">
               Submit Registration
             </button>
           </form>
           <div id="success" class="hidden text-center mt-5 font-bold text-sm" style="color:#9db890"><i class="fas fa-check-circle mr-2"></i>Application Sent! We'll be in touch soon.</div>
+          <p class="text-center mt-4 text-xs" style="color:rgba(255,255,255,.3)"><i class="fas fa-lock mr-1"></i>Your information is private and will never be shared with third parties.</p>
         </div>
         <!-- Leadership panel -->
         <div class="p-10 lg:p-14 border-t lg:border-t-0 lg:border-l" style="border-color:rgba(255,255,255,.08)">
           <h3 class="font-serif text-xl mb-8 border-l-4 border-terra-400 pl-4" style="color:#faf6f0">Our Leadership</h3>
           <div class="space-y-7">
             <div class="flex items-center gap-5 group">
-              <a href="https://www.linkedin.com/in/mithila-malhotra/" target="_blank" class="w-18 h-18 rounded-2xl overflow-hidden flex-shrink-0 ring-2 ring-sage-700 group-hover:ring-terra-400 transition-all grayscale group-hover:grayscale-0" style="width:72px;height:72px">
+              <a href="https://www.linkedin.com/in/mithila-malhotra/" target="_blank" rel="noopener noreferrer" class="w-18 h-18 rounded-2xl overflow-hidden flex-shrink-0 ring-2 ring-sage-700 group-hover:ring-terra-400 transition-all grayscale group-hover:grayscale-0" style="width:72px;height:72px">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKQWU-i_Ki-1SHe4euEZFM75wH-2Oi--jO7g&s" alt="Mithila Malhotra" class="w-full h-full object-cover" />
               </a>
               <div>
-                <a href="https://www.linkedin.com/in/mithila-malhotra/" target="_blank">
+                <a href="https://www.linkedin.com/in/mithila-malhotra/" target="_blank" rel="noopener noreferrer">
                   <h4 class="font-bold text-base" style="color:#faf6f0">Mithila Malhotra <i class="fab fa-linkedin text-xs ml-1 text-sage-500 group-hover:text-blue-400"></i></h4>
                 </a>
                 <p class="text-xs font-black tracking-widest uppercase mt-1 mb-2" style="color:#f0a472">Founder &amp; Director</p>
@@ -817,11 +827,11 @@
             </div>
             <div class="h-px" style="background:rgba(255,255,255,.08)"></div>
             <div class="flex items-center gap-5 group">
-              <a href="https://www.linkedin.com/in/akhil-mahajan-5101641a/" target="_blank" class="rounded-2xl overflow-hidden flex-shrink-0 ring-2 ring-sage-700 group-hover:ring-terra-400 transition-all grayscale group-hover:grayscale-0" style="width:72px;height:72px">
+              <a href="https://www.linkedin.com/in/akhil-mahajan-5101641a/" target="_blank" rel="noopener noreferrer" class="rounded-2xl overflow-hidden flex-shrink-0 ring-2 ring-sage-700 group-hover:ring-terra-400 transition-all grayscale group-hover:grayscale-0" style="width:72px;height:72px">
                 <img src="https://media.licdn.com/dms/image/v2/C4D03AQGwgEq4siPyZw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516838174117?e=1778716800&v=beta&t=28Kb4OlMAANUpnGmWN6OauWPQTTrP6qVcigojm6HaDU" alt="Akhil Mahajan" class="w-full h-full object-cover" />
               </a>
               <div>
-                <a href="https://www.linkedin.com/in/akhil-mahajan-5101641a/" target="_blank">
+                <a href="https://www.linkedin.com/in/akhil-mahajan-5101641a/" target="_blank" rel="noopener noreferrer">
                   <h4 class="font-bold text-base" style="color:#faf6f0">Akhil Mahajan <i class="fab fa-linkedin text-xs ml-1 text-sage-500 group-hover:text-blue-400"></i></h4>
                 </a>
                 <p class="text-xs font-black tracking-widest uppercase mt-1 mb-2" style="color:#f0a472">Founder &amp; Director</p>
@@ -850,8 +860,8 @@
         </div>
         <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,.4)">Healing Minds. Protecting Lives. Transforming Communities across Uttar Pradesh since 2024.</p>
         <div class="flex gap-3">
-          <a href="https://www.linkedin.com/company/bhavini-foundation" target="_blank" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:bg-terra-600 hover:text-white" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/bhavinifoundation/" target="_blank" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:bg-terra-600 hover:text-white" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/bhavini-foundation" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:bg-terra-600 hover:text-white" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/bhavinifoundation/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:bg-terra-600 hover:text-white" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)"><i class="fab fa-instagram"></i></a>
           <a href="https://wa.me/918448928049" class="w-9 h-9 rounded-xl flex items-center justify-center text-sm transition-all hover:bg-green-600 hover:text-white" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -874,7 +884,7 @@
         <h4 class="font-black text-xs tracking-widest uppercase mb-5 pb-3 border-b" style="color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.08)">Contact Us</h4>
         <div class="space-y-3 text-sm">
           <a href="tel:+918448928049"                    class="flex items-start gap-3 hover:text-white transition-colors"><i class="fas fa-phone-alt w-4 mt-0.5" style="color:#f0a472"></i>+91 8448928049 / 8448928452</a>
-          <a href="mailto:info@bhavinifoundation.com"    class="flex items-start gap-3 hover:text-white transition-colors"><i class="fas fa-envelope w-4 mt-0.5" style="color:#f0a472"></i>info@bhavinifoundation.com</a>
+          <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#104;&#97;&#118;&#105;&#110;&#105;&#102;&#111;&#117;&#110;&#100;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;"    class="flex items-start gap-3 hover:text-white transition-colors"><i class="fas fa-envelope w-4 mt-0.5" style="color:#f0a472"></i>&#105;&#110;&#102;&#111;&#64;&#98;&#104;&#97;&#118;&#105;&#110;&#105;&#102;&#111;&#117;&#110;&#100;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;</a>
           <p class="flex items-start gap-3"><i class="fas fa-map-marker-alt w-4 mt-0.5" style="color:#f0a472"></i>124, Modha South, Faizabad, UP – 224001</p>
         </div>
       </div>
@@ -914,7 +924,7 @@
       </div>
       <div class="rounded-xl p-4 mb-1" style="background:#f2f5f0;border:1px solid #e2e9de">
         <p class="text-xs font-bold text-sage-700 mb-1"><i class="fas fa-building mr-1 text-sage-400"></i> Corporate or Large Donation?</p>
-        <p class="text-xs text-sage-500 leading-relaxed">Email <a href="mailto:info@bhavinifoundation.com?subject=Donation%20Enquiry" class="font-bold text-terra-500 hover:underline">info@bhavinifoundation.com</a> — we'll share bank details securely.</p>
+        <p class="text-xs text-sage-500 leading-relaxed">Email <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#104;&#97;&#118;&#105;&#110;&#105;&#102;&#111;&#117;&#110;&#100;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;?subject=Donation%20Enquiry" class="font-bold text-terra-500 hover:underline">&#105;&#110;&#102;&#111;&#64;&#98;&#104;&#97;&#118;&#105;&#110;&#105;&#102;&#111;&#117;&#110;&#100;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;</a> — we'll share bank details securely.</p>
       </div>
     </div>
     <div class="flex items-center gap-3 rounded-2xl p-4 mb-4" style="background:#fdf4ef;border:1px solid rgba(217,95,37,.2)">
@@ -937,7 +947,7 @@
 </div>
 
 <!-- WhatsApp FAB -->
-<a href="https://wa.me/918448928049" target="_blank" class="fixed right-6 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all" id="whatsappFab" style="z-index:70;bottom:88px">
+<a href="https://wa.me/918448928049" target="_blank" rel="noopener noreferrer" class="fixed right-6 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-all" id="whatsappFab" style="z-index:70;bottom:88px">
   <i class="fab fa-whatsapp text-3xl"></i>
 </a>
 
@@ -1041,17 +1051,49 @@
     document.getElementById('customAmtWrap').classList.toggle('hidden', val !== 'custom');
   }
 
-  // Form
+  // Form — with honeypot + rate limiting + validation
   const vForm = document.getElementById('vForm');
   const vBtn  = document.getElementById('submitBtn');
   const vOk   = document.getElementById('success');
+  let lastSubmit = 0;
+
   vForm.addEventListener('submit', e => {
     e.preventDefault();
+
+    // Honeypot check — if bot filled the hidden field, silently reject
+    const hp = vForm.querySelector('input[name="website"]');
+    if (hp && hp.value) {
+      vForm.style.display = 'none';
+      vOk.classList.remove('hidden');
+      return;
+    }
+
+    // Rate limiting — prevent resubmission within 30 seconds
+    const now = Date.now();
+    if (now - lastSubmit < 30000) {
+      vBtn.textContent = 'Please wait…';
+      setTimeout(() => { vBtn.textContent = 'Submit Registration'; vBtn.disabled = false; }, 3000);
+      return;
+    }
+
+    // Basic validation
+    const name = vForm.querySelector('[name="name"]').value.trim();
+    const email = vForm.querySelector('[name="email"]').value.trim();
+    if (name.length < 2) { alert('Please enter your full name.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+
+    lastSubmit = now;
     vBtn.textContent = 'Sending…';
     vBtn.disabled = true;
+
     fetch(vForm.action, { method:'POST', body: new FormData(vForm) })
       .then(() => { vForm.style.display='none'; vOk.classList.remove('hidden'); })
-      .catch(() => { alert('Something went wrong. Please try again.'); vBtn.textContent='Submit Registration'; vBtn.disabled=false; });
+      .catch(() => {
+        alert('Something went wrong. Please try again.');
+        vBtn.textContent = 'Submit Registration';
+        vBtn.disabled = false;
+        lastSubmit = 0;
+      });
   });
 
   // Active nav highlight
